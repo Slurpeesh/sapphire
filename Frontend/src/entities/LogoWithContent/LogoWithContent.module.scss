@@ -1,0 +1,40 @@
+@import '@/global.scss';
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20vw, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  animation: 0.7s fadeInLeft;
+}
+
+.logoText {
+  font-family: 'NotoSans_ExtraBold';
+  text-align: center;
+  font-size: calc($indexFontSize * 1.65 + 10px);
+  color: var(--primaryTextColor);
+  transition: color $transitionSlow;
+}
+
+.svg {
+  width: $logoSvgIconSize;
+  height: $logoSvgIconSize;
+}
+
+@media screen and (max-width: $desktopMobileLimit) {
+  .logoText {
+    font-size: calc($indexFontSize * 1.65 + 10px);
+    letter-spacing: -1.5px;
+  }
+}

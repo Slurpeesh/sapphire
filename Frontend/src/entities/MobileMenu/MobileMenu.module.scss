@@ -1,0 +1,44 @@
+@import '@/global.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  padding: 0px;
+  cursor: pointer;
+
+  &[data-menu-active='true'] {
+    .close {
+      visibility: visible;
+    }
+
+    .menu {
+      visibility: hidden;
+    }
+  }
+}
+
+.menu {
+  color: var(--primaryTextColor);
+  width: $menuMobileIconSize;
+  height: $menuMobileIconSize;
+  transition: color $transitionSlow;
+  visibility: visible;
+}
+
+.close {
+  position: absolute;
+  color: var(--primaryTextColor);
+  width: calc($menuMobileIconSize - 3px);
+  height: calc($menuMobileIconSize - 3px);
+  transition: color $transitionSlow;
+  visibility: hidden;
+}
+
+@media screen and (min-width: $desktopMobileLimit) {
+  .container {
+    display: none;
+  }
+}

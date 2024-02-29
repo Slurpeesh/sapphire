@@ -1,0 +1,7 @@
+@import '@/global.scss';
+
+.subHeader {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: calc($indexFontSize * 0.7 + 10px);
+}

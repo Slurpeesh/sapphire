@@ -1,0 +1,45 @@
+@import '@/global.scss';
+
+.themeSwitcher {
+  background-color: var(--primaryColorAccent);
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+  box-shadow: var(--shadowParamsOnFront);
+  transition: color $transitionSlow, background-color $transitionSlow,
+    border-color $transitionSlow, transform $transitionSlow,
+    box-shadow $transitionSlow;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc($switherIconSize + 3px);
+    height: calc($switherIconSize + 3px);
+    background-color: var(--primaryColorLight);
+    border-radius: 50px;
+    left: 0;
+    z-index: 0;
+    transform: translateX(var(--circleTransformX));
+    transition: color $transitionSlow, background-color $transitionSlow,
+      border-color $transitionSlow, transform $transitionSlow;
+  }
+}
+
+.light {
+  width: $switherIconSize;
+  height: $switherIconSize;
+  color: var(--primaryTextColor);
+  z-index: 1;
+}
+
+.dark {
+  width: $switherIconSize;
+  height: $switherIconSize;
+  color: var(--primaryTextColor);
+  z-index: 1;
+}

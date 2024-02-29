@@ -1,0 +1,15 @@
+@import '@/global.scss';
+
+.loaderBlock {
+  position: relative;
+  background-color: var(--bgColorSection);
+  min-height: $outletRatio;
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (max-width: $desktopMobileLimit) {
+  .loaderBlock {
+    min-height: $outletMobileRatio;
+  }
+}

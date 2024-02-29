@@ -1,0 +1,23 @@
+@import '@/global.scss';
+
+.contactBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: fit-content;
+  color: var(--primaryTextColor);
+  text-decoration: none;
+  transition: color $transitionSlow;
+
+  &:hover {
+    color: var(--primaryColorAccent);
+    transition: color $transitionFast;
+    text-decoration: underline;
+  }
+}
+
+.text {
+  font-size: calc($indexFontSize + 5px);
+}

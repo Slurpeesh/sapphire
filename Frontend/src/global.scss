@@ -1,0 +1,86 @@
+/*Light theme colors*/
+$primaryColor: hsl(240, 69%, 66%);
+$primaryColorDark: hsl(251, 42%, 30%);
+$primaryColorAccent: hsl(251, 67%, 51%);
+$primaryColorSecondaryAccent: hsl(251, 78%, 63%);
+$primaryColorLight: hsl(237, 17%, 92%);
+$primaryTextColor: hsl(237, 17%, 10%);
+$secondaryColor: hsl(126, 97%, 27%);
+$shadowParamsHeader: 0px -2.5px 3px rgb(50, 50, 50);
+$shadowParamsOutlet: 0px 3px 5px 1px rgb(50, 50, 50);
+$shadowParamsOnFront: 0px 0px 5px 1px rgb(50, 50, 50);
+$linkColor: hsl(243, 100%, 57%);
+$linkHoverColor: hsl(240, 100%, 59%);
+$linkVisitedColor: hsl(257, 100%, 54%);
+$bgColorSection: rgba(231, 231, 238, 0.7);
+
+/*Dark theme colors*/
+$darkPrimaryColor: hsl(240, 69%, 33%);
+$darkPrimaryColorDark: hsl(251, 42%, 20%);
+$darkPrimaryColorAccent: hsl(251, 67%, 25%);
+$darkPrimaryColorSecondaryAccent: hsl(251, 78%, 32%);
+$darkPrimaryColorLight: hsl(237, 17%, 40%);
+$darkPrimaryTextColor: hsl(237, 17%, 90%);
+$darkSecondaryColor: hsl(126, 63%, 54%);
+$darkShadowParamsHeader: 0px -2.5px 3px rgb(30, 30, 30);
+$darkShadowParamsOutlet: 0px 3px 5px 1px rgb(35, 35, 35);
+$darkShadowParamsOnFront: 0px 0px 5px 1px rgb(35, 35, 35);
+$darkLinkColor: hsl(197, 100%, 81%);
+$darkLinkHoverColor: hsl(186, 100%, 74%);
+$darkLinkVisitedColor: hsl(199, 100%, 79%);
+$bgDarkColorSection: rgba(85, 86, 119, 0.8);
+
+div[data-theme='light'] {
+  --primaryColor: #{$primaryColor};
+  --primaryColorDark: #{$primaryColorDark};
+  --primaryColorAccent: #{$primaryColorAccent};
+  --primaryColorSecondaryAccent: #{$primaryColorSecondaryAccent};
+  --primaryColorLight: #{$primaryColorLight};
+  --primaryTextColor: #{$primaryTextColor};
+  --secondaryColor: #{$secondaryColor};
+  --shadowParamsHeader: #{$shadowParamsHeader};
+  --shadowParamsOutlet: #{$shadowParamsOutlet};
+  --shadowParamsOnFront: #{$shadowParamsOnFront};
+  --linkColor: #{$linkColor};
+  --linkHoverColor: #{$linkHoverColor};
+  --linkVisitedColor: #{$linkVisitedColor};
+  --circleTransformX: 3px;
+  --bgColorSection: #{$bgColorSection};
+}
+
+div[data-theme='dark'] {
+  --primaryColor: #{$darkPrimaryColor};
+  --primaryColorDark: #{$darkPrimaryColorDark};
+  --primaryColorAccent: #{$darkPrimaryColorAccent};
+  --primaryColorSecondaryAccent: #{$darkPrimaryColorSecondaryAccent};
+  --primaryColorLight: #{$darkPrimaryColorLight};
+  --primaryTextColor: #{$darkPrimaryTextColor};
+  --secondaryColor: #{$darkSecondaryColor};
+  --shadowParamsHeader: #{$darkShadowParamsHeader};
+  --shadowParamsOutlet: #{$darkShadowParamsOutlet};
+  --shadowParamsOnFront: #{$darkShadowParamsOnFront};
+  --linkColor: #{$darkLinkColor};
+  --linkHoverColor: #{$darkLinkHoverColor};
+  --linkVisitedColor: #{$darkLinkVisitedColor};
+  --circleTransformX: 38px;
+  --bgColorSection: #{$bgDarkColorSection};
+}
+
+/*Global variables*/
+$headerRatio: 15vh;
+$footerRatio: 10vh;
+$outletRatio: 75vh;
+$headerMobileRatio: 10vh;
+$footerMobileRatio: 10vh;
+$outletMobileRatio: 80vh;
+$indexFontSize: calc(1vw + 1vh);
+$switherIconSize: 25px;
+$transitionSlow: 0.3s ease-out;
+$transitionFast: 0.1s ease-out;
+$shadowMainWidget: 0px 0px 10px 2px rgb(30, 30, 30);
+$desktopMobileLimit: 900px;
+$menuMobileIconSize: 35px;
+$logoSvgIconSize: calc(35px + 2vw);
+$linkSvgIconSize: calc(14px + 1vw);
+$gradientBg: linear-gradient(135deg, rgb(50, 0, 220) 0%, rgb(0, 0, 220) 100%);
+$navNum: 4;

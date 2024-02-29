@@ -1,0 +1,8 @@
+@import '@/global.scss';
+
+.wrapper {
+  background-color: var(--primaryColorLight);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}

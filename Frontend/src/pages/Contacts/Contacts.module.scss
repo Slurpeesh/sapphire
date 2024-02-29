@@ -1,0 +1,28 @@
+@import '@/global.scss';
+
+.logo {
+  width: $linkSvgIconSize;
+  height: $linkSvgIconSize;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pic {
+  height: calc($indexFontSize * 18);
+  width: calc($indexFontSize * 18);
+}
+
+@media screen and (max-width: $desktopMobileLimit) {
+  .pic {
+    display: none;
+  }
+}

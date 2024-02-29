@@ -1,0 +1,15 @@
+@import '@/global.scss';
+
+.wrapper {
+  margin-top: 7px;
+  font-size: calc($indexFontSize * 0.25 + 10px);
+}
+
+.name {
+  text-align: center;
+  font-weight: bold;
+}
+
+.role {
+  text-align: center;
+}

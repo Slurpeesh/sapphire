@@ -1,0 +1,10 @@
+@import '@/global.scss';
+
+.socialImg {
+  width: 45px;
+  height: 45px;
+  transition: transform $transitionFast;
+  &:hover {
+    transform: scale(1.2);
+  }
+}

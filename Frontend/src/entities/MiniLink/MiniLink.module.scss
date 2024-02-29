@@ -1,0 +1,31 @@
+@import '@/global.scss';
+
+.link {
+  font-size: calc($indexFontSize * 0.5 + 12px);
+  text-decoration: none;
+
+  &:link {
+    color: var(--linkColor);
+  }
+
+  &:visited {
+    color: var(--linkVisitedColor);
+  }
+
+  &:focus {
+    color: var(--secondaryColor);
+    text-decoration: underline;
+    outline: 2px solid var(--secondaryColor);
+  }
+
+  &:hover {
+    color: var(--linkHoverColor);
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: var(--secondaryColor);
+    text-decoration: underline;
+    outline: none;
+  }
+}

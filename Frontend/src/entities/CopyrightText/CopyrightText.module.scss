@@ -1,0 +1,9 @@
+@import '@/global.scss';
+
+.copy {
+  text-align: center;
+  font-family: 'NotoSans_SemiBold';
+  font-size: calc($indexFontSize * 0.4 + 10px);
+  width: 100%;
+  color: $primaryColorLight;
+}

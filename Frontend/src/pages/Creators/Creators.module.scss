@@ -1,0 +1,25 @@
+@import '@/global.scss';
+
+.flexWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.creatorCard {
+  margin: 10px;
+  padding-bottom: 10px;
+  background-color: var(--primaryColorLight);
+  border: 1px solid var(--primaryColorDark);
+  box-shadow: var(--shadowParamsOutlet);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: background-color $transitionSlow;
+}
+
+@media screen and (max-width: 1200px) {
+  .flexWrapper {
+    flex-direction: column;
+  }
+}

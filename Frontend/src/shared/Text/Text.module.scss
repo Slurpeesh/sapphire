@@ -1,0 +1,6 @@
+@import '@/global.scss';
+
+.text {
+  color: var(--primaryTextColor);
+  transition: color $transitionSlow;
+}

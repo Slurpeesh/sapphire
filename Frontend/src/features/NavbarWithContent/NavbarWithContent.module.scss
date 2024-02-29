@@ -1,0 +1,97 @@
+@import '@/global.scss';
+
+.navbar {
+  display: flex;
+  transition: transform $transitionFast;
+}
+
+.link {
+  background-color: var(--primaryColorAccent);
+  font-size: calc($indexFontSize * 0.5 + 8px);
+  padding: 5px;
+  text-decoration: none;
+  width: 14vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  transition: background-color $transitionSlow, top $transitionFast,
+    box-shadow $transitionFast;
+
+  &:hover {
+    background-color: var(--primaryColorSecondaryAccent);
+    top: 3px;
+    box-shadow: var(--shadowParamsHeader);
+  }
+}
+
+.activeLink {
+  background-color: var(--primaryColorSecondaryAccent);
+  font-size: calc($indexFontSize * 0.5 + 8px);
+  padding: 5px;
+  border: 1px solid var(--primaryColorAccent);
+  text-decoration: none;
+  width: 14vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  transition: background-color $transitionSlow, box-shadow $transitionFast,
+    border $transitionSlow;
+  cursor: default;
+
+  &:hover {
+    top: 0px;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: $desktopMobileLimit) {
+  .navbar {
+    position: absolute;
+    top: $headerMobileRatio;
+    right: 0;
+    flex-direction: column;
+    transform: translateX(45vw);
+
+    .activeLink {
+      border: none;
+    }
+
+    .link {
+      width: 45vw;
+      padding: 10px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $darkPrimaryColorDark;
+      opacity: 0;
+      transform: translateX(0vw);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        top: 0px;
+      }
+
+      @for $i from 1 through $navNum {
+        &:nth-child(#{$i}) {
+          transition: background-color $transitionSlow,
+            box-shadow $transitionFast, border $transitionSlow,
+            transform $transitionSlow calc(#{$i}s / (#{$navNum} * 3)),
+            opacity $transitionSlow calc(#{$i}s / (#{$navNum} * 3));
+        }
+      }
+    }
+
+    &[data-menu-active='true'] {
+      .link {
+        transform: translateX(-45vw);
+        opacity: 1;
+      }
+    }
+  }
+}

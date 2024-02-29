@@ -1,0 +1,111 @@
+@import '@/nullifier.scss';
+@import '@/fonts.scss';
+@import '@/global.scss';
+
+html {
+  overflow-x: hidden; /*May be DANGEROUS for development!!!*/
+}
+
+body {
+  font-family: 'NotoSans_Regular', serif;
+  position: relative;
+}
+
+#root {
+  position: relative;
+}
+
+.header {
+  position: relative;
+  z-index: 10000;
+  min-height: $headerRatio;
+  background-color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: $shadowMainWidget;
+  transition: background-color $transitionSlow;
+}
+
+.footer {
+  position: relative;
+  z-index: 10000;
+  min-height: $footerRatio;
+  background-color: var(--primaryColorDark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadowMainWidget;
+  transition: background-color $transitionSlow;
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+  min-height: $outletRatio;
+  background-color: var(--bgColorSection);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color $transitionSlow;
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+  min-height: $outletRatio;
+  background-color: var(--bgColorSection);
+  padding: 20px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  transition: background-color $transitionSlow;
+}
+
+.creators {
+  position: relative;
+  overflow: hidden;
+  min-height: $outletRatio;
+  background-color: var(--bgColorSection);
+  padding: 20px;
+  display: grid;
+  place-content: center;
+  transition: background-color $transitionSlow;
+}
+
+.contacts {
+  position: relative;
+  overflow: hidden;
+  min-height: $outletRatio;
+  background-color: var(--bgColorSection);
+  padding: 20px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  transition: background-color $transitionSlow;
+}
+
+@media screen and (max-width: $desktopMobileLimit) {
+  .header {
+    min-height: $headerMobileRatio;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer {
+    min-height: $footerMobileRatio;
+  }
+
+  .main,
+  .about,
+  .contacts,
+  .creators {
+    min-height: $outletMobileRatio;
+  }
+}
