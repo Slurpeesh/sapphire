@@ -7,6 +7,7 @@ import { ErrorPage } from '@/pages/ErrorPage'
 import Main from '@/pages/Main/Main'
 import LoaderBlock from '@/widgets/LoaderBlock/LoaderBlock'
 import LoaderFull from '@/widgets/LoaderFull/LoaderFull'
+import { injectSpeedInsights } from '@vercel/speed-insights'
 import { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
@@ -16,6 +17,8 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom'
 import { ThemeProvider } from './providers/ThemeProvider'
+
+injectSpeedInsights()
 
 const root = document.getElementById('root')
 
