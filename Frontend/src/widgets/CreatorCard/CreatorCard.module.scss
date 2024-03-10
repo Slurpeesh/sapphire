@@ -27,7 +27,8 @@
   gap: 10px;
   opacity: 0.2;
   transform: translateY(80px);
-  transition: transform $transitionSlow, opacity $transitionSlow;
+  transition: transform $transitionSlow, opacity $transitionSlow,
+    background-color $transitionSlow;
 }
 
 @media screen and (max-width: $desktopMobileLimit) {
