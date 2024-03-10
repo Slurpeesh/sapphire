@@ -21,3 +21,9 @@
 .text {
   font-size: calc($indexFontSize + 5px);
 }
+
+@media screen and (max-width: $desktopMobileLimit) {
+  .contactBlock {
+    text-decoration: underline;
+  }
+}

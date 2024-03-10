@@ -29,3 +29,11 @@
   transform: translateY(80px);
   transition: transform $transitionSlow, opacity $transitionSlow;
 }
+
+@media screen and (max-width: $desktopMobileLimit) {
+  .socials {
+    transform: translateY(0px);
+    opacity: 1;
+    height: 60px;
+  }
+}

@@ -70,9 +70,9 @@ div[data-theme='dark'] {
 $headerRatio: 15vh;
 $footerRatio: 10vh;
 $outletRatio: 75vh;
-$headerMobileRatio: 10vh;
+$headerMobileRatio: calc(6vh + 6vw);
 $footerMobileRatio: 10vh;
-$outletMobileRatio: 80vh;
+$outletMobileRatio: calc(75vh + 9vh - 6vw);
 $indexFontSize: calc(1vw + 1vh);
 $switherIconSize: 25px;
 $transitionSlow: 0.3s ease-out;

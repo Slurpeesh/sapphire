@@ -3,12 +3,14 @@
 @import '@/global.scss';
 
 html {
-  overflow-x: hidden; /*May be DANGEROUS for development!!!*/
+  overflow-x: hidden;
+  height: auto;
 }
 
 body {
   font-family: 'NotoSans_Regular', serif;
   position: relative;
+  overflow-x: hidden; /*May be DANGEROUS for development!!!*/
 }
 
 #root {
@@ -18,7 +20,7 @@ body {
 .header {
   position: relative;
   z-index: 10000;
-  min-height: $headerRatio;
+  height: $headerRatio;
   background-color: var(--primaryColor);
   display: flex;
   align-items: center;
@@ -93,7 +95,7 @@ body {
 
 @media screen and (max-width: $desktopMobileLimit) {
   .header {
-    min-height: $headerMobileRatio;
+    height: $headerMobileRatio;
     padding-left: 10px;
     padding-right: 10px;
   }
