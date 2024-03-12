@@ -16,7 +16,10 @@ export default function MobileMenu({
     <button
       data-menu-active={dataMenuActive}
       className={classes.container}
-      onClick={menuHandler}
+      onClick={(e) => {
+        e.stopPropagation()
+        menuHandler(e)
+      }}
       aria-label="Открыть или закрыть меню"
     >
       <Menu className={classes.menu} aria-label="Открыть меню" />

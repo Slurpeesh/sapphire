@@ -11,7 +11,10 @@ export default function ThemeSwitcher() {
       id="themeSwitcher"
       className={classes.themeSwitcher}
       aria-label="Переключатель на темную или светлую тему"
-      onClick={changeTheme}
+      onClick={(e) => {
+        e.stopPropagation()
+        changeTheme()
+      }}
     >
       <Light className={classes.light} aria-label="Светлая тема" />
       <Dark className={classes.dark} aria-label="Темная тема" />

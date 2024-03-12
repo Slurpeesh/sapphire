@@ -13,9 +13,9 @@ export default function About({ className }: IAbout) {
     <main className={className}>
       <GradientBackground />
       <HeaderText>О нас</HeaderText>
-      <h2 className={classes.subHeader}>
+      <h3 className={classes.subHeader}>
         <Text>Миссия</Text>
-      </h2>
+      </h3>
       <Paragraph>
         Нашей миссией является создание инновационной и вдохновляющей
         экосистемы, объединяющей людей через обмен услугами. Мы стремимся
@@ -23,9 +23,9 @@ export default function About({ className }: IAbout) {
         эффективно обмениваться навыками, опытом и услугами, способствуя
         взаимному росту и развитию.
       </Paragraph>
-      <h2 className={classes.subHeader}>
+      <h3 className={classes.subHeader}>
         <Text>Видение компании</Text>
-      </h2>
+      </h3>
       <Paragraph>
         Мы видим будущее, где &laquo;Sapphire&raquo; станет центром для всех,
         кто ищет возможности для личного и профессионального роста. Наше видение
@@ -33,9 +33,9 @@ export default function About({ className }: IAbout) {
         со всего мира могут соединяться, обмениваться идеями, развиваться и
         достигать новых вершин в своих областях.
       </Paragraph>
-      <h2 className={classes.subHeader}>
+      <h3 className={classes.subHeader}>
         <Text>Стратегия компании</Text>
-      </h2>
+      </h3>
       <Paragraph>
         Наши действия направлены на разностороннюю поддержку наших
         пользователей. Мы стремимся предоставить интуитивно понятные и

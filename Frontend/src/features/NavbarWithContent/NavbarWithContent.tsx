@@ -1,17 +1,25 @@
 import Navbar from '@/entities/Navbar/Navbar'
 import classes from '@/features/NavbarWithContent/NavbarWithContent.module.scss'
 import Text from '@/shared/Text/Text'
+import { MutableRefObject } from 'react'
 import { NavLink } from 'react-router-dom'
 
 interface INavbarWithContent {
   dataMenuActive: string
+  menuRef: MutableRefObject<undefined>
 }
 
 export default function NavbarWithContent({
   dataMenuActive,
+  menuRef,
 }: INavbarWithContent) {
   return (
-    <Navbar className={classes.navbar} dataMenuActive={dataMenuActive}>
+    <Navbar
+      className={classes.navbar}
+      dataMenuActive={dataMenuActive}
+      menuRef={menuRef}
+      onClick={(e) => e.stopPropagation()}
+    >
       <NavLink
         to="/"
         className={({ isActive }) =>
